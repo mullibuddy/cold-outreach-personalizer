@@ -14,7 +14,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **INPUT-03**: User can enter prospect company name
 - [ ] **INPUT-04**: User can describe their product/service (text area)
 - [ ] **INPUT-05**: User can select outreach channel (Cold Email / LinkedIn DM / Cold Call)
-- [ ] **INPUT-06**: Form validates all required fields before submission (test scaffold ready)
+- [x] **INPUT-06**: Form validates all required fields before submission (Zod schemas complete)
 
 ### AI Generation
 
@@ -53,7 +53,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFRA-01**: Application is fully stateless (no database) (verified by test)
 - [ ] **INFRA-02**: API route implements rate limiting to prevent cost overruns
-- [ ] **INFRA-03**: Environment variables are properly secured (test scaffold ready)
+- [x] **INFRA-03**: Environment variables are properly secured (startup validation complete)
 - [ ] **INFRA-04**: Application handles API timeouts gracefully (streaming or timeout extension)
 - [ ] **INFRA-05**: Deployment to Vercel succeeds with zero config
 
@@ -111,7 +111,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INPUT-03 | Phase 3 | Pending |
 | INPUT-04 | Phase 3 | Pending |
 | INPUT-05 | Phase 3 | Pending |
-| INPUT-06 | Phase 1 | In Progress (Zod 4.4.3 installed, schemas coming Plan 01-02) |
+| INPUT-06 | Phase 1 | Complete (Zod schemas implemented with user-friendly errors) |
 | GEN-01 | Phase 2 | Pending |
 | GEN-02 | Phase 2 | Pending |
 | GEN-03 | Phase 2 | Pending |
@@ -135,7 +135,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-06 | Phase 3 | Pending |
 | INFRA-01 | Phase 1 | Complete (verified by test) |
 | INFRA-02 | Phase 2 | Pending |
-| INFRA-03 | Phase 1 | In Progress (test scaffold ready) |
+| INFRA-03 | Phase 1 | Complete (environment validated at startup with fail-fast) |
 | INFRA-04 | Phase 2 | Pending |
 | INFRA-05 | Phase 4 | Pending |
 
