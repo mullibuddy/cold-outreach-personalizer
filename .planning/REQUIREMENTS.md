@@ -111,7 +111,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INPUT-03 | Phase 3 | Pending |
 | INPUT-04 | Phase 3 | Pending |
 | INPUT-05 | Phase 3 | Pending |
-| INPUT-06 | Phase 1 | In Progress (test scaffold ready) |
+| INPUT-06 | Phase 1 | In Progress (Zod 4.4.3 installed, schemas coming Plan 01-02) |
 | GEN-01 | Phase 2 | Pending |
 | GEN-02 | Phase 2 | Pending |
 | GEN-03 | Phase 2 | Pending |
@@ -146,4 +146,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-05-13*
-*Last updated: 2026-05-13 after roadmap creation*
+*Last updated: 2026-05-14T16:48:24Z after Plan 01-01 completion*

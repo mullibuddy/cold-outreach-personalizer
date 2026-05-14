@@ -31,7 +31,7 @@
 
 Plans:
 - [x] 01-00-PLAN.md — Test infrastructure setup (Wave 0: Vitest framework, test scaffolds)
-- [ ] 01-01-PLAN.md — Next.js 16 initialization, TypeScript strict mode, Vitest test framework setup
+- [x] 01-01-PLAN.md — Next.js 16 initialization, TypeScript strict mode, Zod validation
 - [ ] 01-02-PLAN.md — Type definitions with Zod schemas, environment validation, API contracts
 
 ---
@@ -97,7 +97,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & API Contracts | 1/3 | In progress | Plan 01-00: 2026-05-14 |
+| 1. Foundation & API Contracts | 2/3 | In progress | Plans 01-00, 01-01: 2026-05-14 |
 | 2. AI Core | 0/? | Not started | - |
 | 3. User Interface | 0/? | Not started | - |
 | 4. Production Ready | 0/? | Not started | - |
@@ -125,4 +125,4 @@ Phase 4 (Production Ready)
 **All other phases** - Standard patterns, no additional research needed
 
 ---
-*Last updated: 2026-05-14 after Phase 1 planning*
+*Last updated: 2026-05-14T16:48:24Z after Plan 01-01 completion*
