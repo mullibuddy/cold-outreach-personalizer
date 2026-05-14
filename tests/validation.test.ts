@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest'
-import { ProspectInputSchema, OpenerSchema } from '@/types'
+// Import directly from specific files to avoid env.ts validation at import time
+import { ProspectInputSchema } from '@/types/prospect'
+import { OpenerSchema } from '@/types/opener'
 
 describe('ProspectInput Validation', () => {
   it('should validate valid prospect input', () => {
