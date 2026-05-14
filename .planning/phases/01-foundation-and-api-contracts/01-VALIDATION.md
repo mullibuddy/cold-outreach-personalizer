@@ -2,8 +2,8 @@
 phase: 01
 slug: foundation-and-api-contracts
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-05-14
 ---
 
@@ -38,9 +38,11 @@ created: 2026-05-14
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 01-01-01 | 01 | 1 | INFRA-01 | unit | `pnpm test tests/api.test.ts -t "stateless" -x` | ❌ W0 | ⬜ pending |
-| 01-01-02 | 01 | 1 | INFRA-03 | unit | `pnpm test tests/env.test.ts -x` | ❌ W0 | ⬜ pending |
-| 01-01-03 | 01 | 1 | INPUT-06 | unit | `pnpm test tests/validation.test.ts -x` | ❌ W0 | ⬜ pending |
+| 01-00-01 | 00 | 0 | INFRA-03 | unit | `pnpm vitest --version` | ✅ W0 | ⬜ pending |
+| 01-00-02 | 00 | 0 | INFRA-01 | unit | `pnpm test --run` | ✅ W0 | ⬜ pending |
+| 01-01-01 | 01 | 1 | INFRA-01 | unit | `pnpm run build && pnpm test --run` | ✅ W0 | ⬜ pending |
+| 01-02-01 | 02 | 2 | INPUT-06 | unit | `pnpm test tests/validation.test.ts --run` | ✅ W0 | ⬜ pending |
+| 01-02-02 | 02 | 2 | INFRA-03 | unit | `pnpm test tests/env.test.ts --run` | ✅ W0 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -48,11 +50,12 @@ created: 2026-05-14
 
 ## Wave 0 Requirements
 
-- [ ] `tests/env.test.ts` — stubs for INFRA-03 (env validation at startup)
-- [ ] `tests/validation.test.ts` — stubs for INPUT-06 (Zod schema validation)
-- [ ] `tests/api.test.ts` — stubs for INFRA-01 (stateless architecture verification)
-- [ ] `vitest.config.mts` — Vitest configuration with jsdom environment
-- [ ] Framework install: `pnpm add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom vite-tsconfig-paths`
+- [x] `tests/env.test.ts` — stubs for INFRA-03 (env validation at startup)
+- [x] `tests/validation.test.ts` — stubs for INPUT-06 (Zod schema validation)
+- [x] `tests/api.test.ts` — stubs for INFRA-01 (stateless architecture verification)
+- [x] `vitest.config.mts` — Vitest configuration with jsdom environment
+- [x] Framework install: `pnpm add -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom vite-tsconfig-paths`
+- [x] Wave 0 plan created: 01-00-PLAN.md
 
 ---
 
@@ -64,11 +67,13 @@ All phase behaviors have automated verification.
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 2s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 2s
+- [x] `nyquist_compliant: true` set in frontmatter
+- [x] Wave 0 plan (01-00-PLAN.md) exists with wave: 0
+- [x] Wave 1+ plans depend on 01-00
 
-**Approval:** pending
+**Approval:** ready for execution
