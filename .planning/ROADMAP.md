@@ -7,7 +7,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Foundation & API Contracts** - Project setup, TypeScript schemas, environment config
+- [x] **Phase 1: Foundation & API Contracts** - Project setup, TypeScript schemas, environment config
 - [ ] **Phase 2: AI Core** - Claude integration, prompt engineering, API routes with cost controls
 - [ ] **Phase 3: User Interface** - Form input, results display, copy functionality, loading states
 - [ ] **Phase 4: Production Ready** - Error handling, mobile polish, Vercel deployment
@@ -37,7 +37,7 @@ Plans:
 ---
 
 ### Phase 2: AI Core
-**Goal**: Deliver working AI generation engine with cost controls and HTTP endpoints
+**Goal**: Deliver working AI generation engine with cost controls and HTTP endpoints that produces three distinct personalized openers using Claude with web search
 
 **Depends on**: Phase 1 (needs schemas and environment config)
 
@@ -51,7 +51,12 @@ Plans:
 5. Content avoids robotic AI voice and includes citations to prevent hallucinations
 6. API routes return structured JSON responses with proper error handling
 
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 02-00-PLAN.md — Test infrastructure (MSW setup, 9 test scaffolds for all Phase 2 requirements)
+- [ ] 02-01-PLAN.md — AI Core implementation (Claude client, prompt engineering, rate limiting)
+- [ ] 02-02-PLAN.md — API route (POST /api/generate with validation, streaming, error handling)
 
 ---
 
@@ -98,7 +103,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & API Contracts | 3/3 | Complete | Plans 01-00, 01-01, 01-02: 2026-05-14 |
-| 2. AI Core | 0/? | Not started | - |
+| 2. AI Core | 0/3 | Planned | - |
 | 3. User Interface | 0/? | Not started | - |
 | 4. Production Ready | 0/? | Not started | - |
 
@@ -116,13 +121,13 @@ Phase 4 (Production Ready)
 
 ## Research Flags
 
-**Phase 2 (AI Core)** - NEEDS RESEARCH
-- Prompt engineering for sales outreach is domain-specific
-- Research effective cold email structures, B2B tone calibration, spam filter avoidance
-- Understand strategic angle differentiation (Trigger vs Pain vs Curiosity)
-- Consider `/gsd:research-phase 2` before planning
+**Phase 2 (AI Core)** - RESEARCH COMPLETE (2026-05-14)
+- Research document: `.planning/phases/02-ai-core/02-RESEARCH.md`
+- Validation strategy: `.planning/phases/02-ai-core/02-VALIDATION.md`
+- Standard stack confirmed: @anthropic-ai/sdk 0.96.0, @upstash/ratelimit, MSW 2.x
+- Critical patterns identified: streaming responses, anti-spam prompts, stateless rate limiting
 
 **All other phases** - Standard patterns, no additional research needed
 
 ---
-*Last updated: 2026-05-14T19:46:47Z after Plan 01-02 completion*
+*Last updated: 2026-05-14 after Phase 2 planning*
