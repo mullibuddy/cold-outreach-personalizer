@@ -15,6 +15,40 @@ export class ClaudeClient {
     })
   }
 
+  /**
+   * Extracts JSON from Claude's response, handling markdown code blocks,
+   * preamble text, and other formatting issues
+   */
+  private extractJSON(content: string): string {
+    // Try to extract from markdown code block first
+    const markdownMatch = content.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/)
+    if (markdownMatch) {
+      return markdownMatch[1].trim()
+    }
+
+    // Try to find JSON object by looking for { and matching }
+    const firstBrace = content.indexOf('{')
+    if (firstBrace === -1) {
+      throw new Error('No JSON object found in response')
+    }
+
+    // Find matching closing brace
+    let depth = 0
+    let lastBrace = firstBrace
+    for (let i = firstBrace; i < content.length; i++) {
+      if (content[i] === '{') depth++
+      if (content[i] === '}') {
+        depth--
+        if (depth === 0) {
+          lastBrace = i
+          break
+        }
+      }
+    }
+
+    return content.substring(firstBrace, lastBrace + 1).trim()
+  }
+
   async generateOpeners(input: ProspectInput): Promise<OpenerOutput> {
     try {
       const response = await this.client.messages.create({
@@ -36,8 +70,11 @@ export class ClaudeClient {
         }
       }
 
+      // Extract JSON from response (handles markdown, preamble text, etc.)
+      const jsonContent = this.extractJSON(fullContent)
+
       // Parse JSON response
-      const parsed = JSON.parse(fullContent)
+      const parsed = JSON.parse(jsonContent)
 
       // Validate with Zod schema
       const validated = OpenerOutputSchema.parse(parsed)
