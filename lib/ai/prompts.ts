@@ -43,7 +43,9 @@ STRATEGIC ANGLES (generate one opener for each):
 CHANNEL CALIBRATION:
 ${getChannelInstructions(input.channel)}
 
-OUTPUT FORMAT (JSON):
+OUTPUT FORMAT:
+Return ONLY valid JSON with NO additional text, explanations, or markdown. The response must be parseable by JSON.parse().
+
 {
   "openers": [
     {
@@ -53,13 +55,26 @@ OUTPUT FORMAT (JSON):
       "followUp": "[1 sentence follow-up]",
       "bestFor": "cold_email" | "linkedin_dm" | "cold_call"
     },
-    // ... 2 more openers with pain and curiosity angles
+    {
+      "angle": "pain",
+      "hook": "[2-3 sentence opener]",
+      "explanation": "Why This Works: [reasoning]",
+      "followUp": "[1 sentence]",
+      "bestFor": "cold_email" | "linkedin_dm" | "cold_call"
+    },
+    {
+      "angle": "curiosity",
+      "hook": "[2-3 sentence opener]",
+      "explanation": "Why This Works: [reasoning]",
+      "followUp": "[1 sentence]",
+      "bestFor": "cold_email" | "linkedin_dm" | "cold_call"
+    }
   ],
   "intelSummary": "[Bullet points of research findings with citations]",
   "citations": ["https://source1.com", "https://source2.com"]
 }
 
-Search now and generate openers.`
+IMPORTANT: Return ONLY the JSON object above. Do not include any text before or after the JSON.`
 }
 
 function getChannelInstructions(channel: ProspectInput['channel']): string {
