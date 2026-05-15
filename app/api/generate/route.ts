@@ -5,8 +5,8 @@ import { errorResponse, zodErrorToFields } from '@/types/api'
 import { ClaudeClient } from '@/lib/ai/client'
 import { checkRateLimit } from '@/lib/rate-limit/limiter'
 
-// Configure Vercel Function timeout (Fluid Compute)
-export const maxDuration = 30
+// Configure Vercel Function timeout (Fluid Compute) - 60s for web search
+export const maxDuration = 60
 
 export async function POST(request: NextRequest) {
   try {
