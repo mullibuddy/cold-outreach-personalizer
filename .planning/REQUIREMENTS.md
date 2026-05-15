@@ -18,20 +18,20 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### AI Generation
 
-- [ ] **GEN-01**: System generates three distinct personalized openers using Claude Sonnet 4 with web search
-- [ ] **GEN-02**: Generation completes within 30 seconds under normal conditions
-- [ ] **GEN-03**: System uses web search to find recent company news and prospect information
-- [ ] **GEN-04**: System enforces citation requirements to prevent hallucinations
-- [ ] **GEN-05**: Generated content avoids AI detection patterns (robotic voice, spam triggers)
+- [x] **GEN-01**: System generates three distinct personalized openers using Claude Sonnet 4 with web search
+- [x] **GEN-02**: Generation completes within 30 seconds under normal conditions
+- [x] **GEN-03**: System uses web search to find recent company news and prospect information
+- [x] **GEN-04**: System enforces citation requirements to prevent hallucinations
+- [x] **GEN-05**: Generated content avoids AI detection patterns (robotic voice, spam triggers)
 
 ### Opener Content
 
-- [ ] **OPENER-01**: Trigger Angle opener references recent company events/news
-- [ ] **OPENER-02**: Pain Angle opener addresses specific role-based pain points
-- [ ] **OPENER-03**: Curiosity Angle opener uses insights, questions, or public content references
-- [ ] **OPENER-04**: Each opener includes hook, "Why This Works" explanation, and follow-up line
-- [ ] **OPENER-05**: Each opener shows "Best For" channel recommendation
-- [ ] **OPENER-06**: Content is calibrated for selected channel (email/LinkedIn/call)
+- [x] **OPENER-01**: Trigger Angle opener references recent company events/news
+- [x] **OPENER-02**: Pain Angle opener addresses specific role-based pain points
+- [x] **OPENER-03**: Curiosity Angle opener uses insights, questions, or public content references
+- [x] **OPENER-04**: Each opener includes hook, "Why This Works" explanation, and follow-up line
+- [x] **OPENER-05**: Each opener shows "Best For" channel recommendation
+- [x] **OPENER-06**: Content is calibrated for selected channel (email/LinkedIn/call)
 
 ### User Actions
 
@@ -52,9 +52,9 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Infrastructure
 
 - [x] **INFRA-01**: Application is fully stateless (no database) (verified by test)
-- [ ] **INFRA-02**: API route implements rate limiting to prevent cost overruns
+- [x] **INFRA-02**: API route implements rate limiting to prevent cost overruns
 - [x] **INFRA-03**: Environment variables are properly secured (startup validation complete)
-- [ ] **INFRA-04**: Application handles API timeouts gracefully (streaming or timeout extension)
+- [x] **INFRA-04**: Application handles API timeouts gracefully (streaming or timeout extension)
 - [ ] **INFRA-05**: Deployment to Vercel succeeds with zero config
 
 ## v2 Requirements
@@ -112,17 +112,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INPUT-04 | Phase 3 | Pending |
 | INPUT-05 | Phase 3 | Pending |
 | INPUT-06 | Phase 1 | Complete (Zod schemas implemented with user-friendly errors) |
-| GEN-01 | Phase 2 | Pending |
-| GEN-02 | Phase 2 | Pending |
-| GEN-03 | Phase 2 | Pending |
-| GEN-04 | Phase 2 | Pending |
-| GEN-05 | Phase 2 | Pending |
-| OPENER-01 | Phase 2 | Pending |
-| OPENER-02 | Phase 2 | Pending |
-| OPENER-03 | Phase 2 | Pending |
-| OPENER-04 | Phase 2 | Pending |
-| OPENER-05 | Phase 2 | Pending |
-| OPENER-06 | Phase 2 | Pending |
+| GEN-01 | Phase 2 | Complete |
+| GEN-02 | Phase 2 | Complete |
+| GEN-03 | Phase 2 | Complete |
+| GEN-04 | Phase 2 | Complete |
+| GEN-05 | Phase 2 | Complete |
+| OPENER-01 | Phase 2 | Complete |
+| OPENER-02 | Phase 2 | Complete |
+| OPENER-03 | Phase 2 | Complete |
+| OPENER-04 | Phase 2 | Complete |
+| OPENER-05 | Phase 2 | Complete |
+| OPENER-06 | Phase 2 | Complete |
 | ACTION-01 | Phase 3 | Pending |
 | ACTION-02 | Phase 3 | Pending |
 | ACTION-03 | Phase 3 | Pending |
@@ -134,9 +134,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-05 | Phase 4 | Pending |
 | UI-06 | Phase 3 | Pending |
 | INFRA-01 | Phase 1 | Complete (verified by test) |
-| INFRA-02 | Phase 2 | Pending |
+| INFRA-02 | Phase 2 | Complete |
 | INFRA-03 | Phase 1 | Complete (environment validated at startup with fail-fast) |
-| INFRA-04 | Phase 2 | Pending |
+| INFRA-04 | Phase 2 | Complete |
 | INFRA-05 | Phase 4 | Pending |
 
 **Coverage:**
