@@ -24,7 +24,7 @@ export class ClaudeClient {
           { role: 'user', content: buildSalesPrompt(input) }
         ],
         tools: [
-          { type: 'web_search_20260209' as const, name: 'web_search' }
+          { type: 'web_search_20250305' as const, name: 'web_search' }
         ],
       })
 
