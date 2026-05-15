@@ -10,8 +10,8 @@ export class ClaudeClient {
   constructor() {
     this.client = new Anthropic({
       apiKey: env.ANTHROPIC_API_KEY,
-      maxRetries: 3, // SDK handles exponential backoff
-      timeout: 25000, // 25s (leave 5s buffer for 30s route limit)
+      maxRetries: 2, // Reduce retries to fit in 30s window
+      timeout: 28000, // 28s (leave 2s buffer for 30s route limit)
     })
   }
 
