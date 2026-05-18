@@ -44,3 +44,6 @@ next-env.d.ts
 *.swp
 *.swo
 *~
+
+# Planning (GSD framework - keep local only)
+.planning/
