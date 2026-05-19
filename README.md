@@ -35,10 +35,14 @@ Each opener uses a different strategic angle:
 
 ## 🚀 Demo
 
-<!-- TODO: Add screenshot of the input form -->
-<!-- TODO: Add screenshot of loading state -->
-<!-- TODO: Add screenshot of results with three openers -->
-<!-- TODO: Add GIF of full flow (optional) -->
+### Input Form
+![Input Form](screenshots/form.png)
+
+### Loading State
+![Loading State](screenshots/loading.png)
+
+### Results
+![Results - Three Personalized Openers](screenshots/results.png)
 
 ### Example Output
 
@@ -82,7 +86,7 @@ Each opener uses a different strategic angle:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cold-outreach-personalizer.git
+   git clone https://github.com/mullibuddy/cold-outreach-personalizer.git
    cd cold-outreach-personalizer
    ```
 
@@ -303,9 +307,9 @@ MIT License - see LICENSE file for details
 
 Built by **Brian Saporito**
 
-- LinkedIn: [Your LinkedIn URL]
-- GitHub: [Your GitHub username]
-- Twitter/X: [Your handle]
+- LinkedIn: [linkedin.com/in/briansaporito](https://linkedin.com/in/briansaporito) *(update with your actual URL)*
+- GitHub: [@mullibuddy](https://github.com/mullibuddy)
+- Twitter/X: *(add if you want)*
 
 ---
 
